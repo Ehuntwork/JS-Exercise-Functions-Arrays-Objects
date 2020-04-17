@@ -105,11 +105,8 @@ function temperatureInF(tempNum, tempUnit) {
  * }
 */
 function makePersonObject(id , name , email) {
-  const personObject = {id: id , name: name, email: email};
-  return personObject
-    
-
-}
+  return {id: id , name: name, email: email};
+}   
 
 /**
  * ### Challenge `getName`
@@ -124,10 +121,21 @@ function makePersonObject(id , name , email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName() {
-  
-}
-
+function getName(objName) {
+  for (let i = 0; i < objName.length; i++){
+    console.log(i);//for loop isn't running at all. Theory: .length doesnt work for some reason.
+    if (objName[i]=== objName.name){
+      console.log('hello');
+      return `Hello, my name is ${objName.name}`;
+    }
+  }
+ }
+///////////////TESTING//////////////////////////////////////////////////////
+let exam = { id: 1, name: 'Leia', email: 'leia@leia.com' };             
+console.log(exam.name);
+console.log(exam.length)
+console.log(getName(exam));
+/////////////////////////////////////////////////////////////////////////////
 
 /**
  * ### Challenge `appleIndex`
