@@ -125,7 +125,7 @@ function makePersonObject(id , name , email) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName() {
-  return 'Hello, my name is ' + makePersonObject.name;
+  
 }
 
 
@@ -144,9 +144,13 @@ function getName() {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
-}
+function appleIndex(x) {
+  for (let i = 0; i < x.length; i++){
+    if (x[i]==='apple'){
+      return i;
+    }
+  }
+ }
 
 /**
  * ### Challenge `isItAnApple`
@@ -163,8 +167,17 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(fruit) {
+  const fruitTwo = [...fruit];
+  for (let i = 0; i < fruit.length; i++){
+    if (fruit[i]==='apple'){
+      fruitTwo[i] = true;
+    }
+    else {
+      fruitTwo[i] = false;
+    }
+  }
+  return fruitTwo;
 }
 
 
